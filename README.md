@@ -1,4 +1,6 @@
 # Praktikum Pemrograman Web Modul 2   
-| nama | nrp |
+| Nama | NRP |
 | --- | --- |
-|||
+| Muhammad Yusuf | 5027251067 |
+| | |
+| | |
