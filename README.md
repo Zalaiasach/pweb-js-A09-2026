@@ -1,3 +1,4 @@
-# Praktikum Pemrograman Web Modul 2
-|---|---|   
-|nama|nrp|
+# Praktikum Pemrograman Web Modul 2   
+| nama | nrp |
+| --- | --- |
+|||
