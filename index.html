@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog Produk - My Store Gweh</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="catalog.js" defer></script>
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">My Store Gweh</a>
+    <div class="account-area">
+      <span>Halo, <strong id="userName">Pengguna</strong></span>
+      <button id="logoutButton" class="button button-light" type="button">Logout</button>
+      <button id="cartButton" class="cart-button" type="button" aria-label="Buka keranjang">
+        Keranjang <span id="cartBadge" class="badge">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-heading">
+      <div>
+        <p class="eyebrow">Koleksi pilihan</p>
+        <h1>Katalog Produk</h1>
+      </div>
+      <p id="resultCount" class="result-count">Memuat produk...</p>
+    </section>
+
+    <section class="toolbar" aria-label="Kontrol katalog">
+      <label class="search-box" for="searchInput"><span aria-hidden="true">⌕</span><input id="searchInput" type="search"
+          placeholder="Cari nama atau kategori..."></label>
+      <label class="select-box" for="categorySelect"><span>Kategori</span><select id="categorySelect">
+          <option value="all">Semua kategori</option>
+        </select></label>
+      <label class="select-box" for="sortSelect"><span>Urutkan</span><select id="sortSelect">
+          <option value="default">Rekomendasi</option>
+          <option value="price-asc">Harga terendah</option>
+          <option value="price-desc">Harga tertinggi</option>
+          <option value="rating-desc">Rating tertinggi</option>
+        </select></label>
+    </section>
+
+    <div id="globalError" class="state error-state hidden" role="alert"></div>
+    <div id="loadingState" class="state">Memuat katalog...</div>
+    <section id="productGrid" class="product-grid" aria-live="polite"></section>
+    <div id="emptyState" class="state hidden">Produk tidak ditemukan.</div>
+    <button id="loadMoreButton" class="button button-primary load-more hidden" type="button">Muat lebih banyak</button>
+  </main>
+
+  <aside id="cartPanel" class="cart-panel" aria-hidden="true">
+    <div class="panel-heading">
+      <h2>Keranjang</h2><button id="closeCartButton" class="icon-button" type="button"
+        aria-label="Tutup keranjang">×</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer"><strong>Total <span id="cartTotal">Rp0</span></strong><button id="clearCartButton"
+        class="button button-light" type="button">Kosongkan</button></div>
+  </aside>
+  <div id="overlay" class="overlay hidden"></div>
+
+  <dialog id="productModal" class="product-modal"><button id="closeModalButton" class="icon-button modal-close"
+      type="button" aria-label="Tutup detail">×</button>
+    <div id="modalContent"></div>
+  </dialog>
+</body>
+
+</html>
