@@ -3,4 +3,4 @@
 | --- | --- |
 | Muhammad Yusuf | 5027251067 |
 | Afriezal Suryapraba Laiasach | 5027251096 |
-| Sebastian Elroi | 5027251040 |
+| Sebastian Elroi Hasian Panjaitan | 5027251040 |
